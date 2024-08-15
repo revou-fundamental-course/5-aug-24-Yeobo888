@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+    padding: 5%;
+    background-color: cyan;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+    @keyframes example {
+    from {background-color: darkorchid;}
+    to {background-color: cyan;}
+}
+p{
+  display: flex;
+  align-content: flex-start;
+}
+#underweight { 
+  background-color: #b2ffff; 
+} 
+
+#normal {
+  background-color: #00ffff;
+} 
+
+#overweight {
+  background-color: #ba55d3;
+}
+
+#obese {
+  background-color: #9932cc;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/form.css">
+    <script src="../js/scripts.js"></script>
+</head>
+<body>
+    <form id="bmiForm">
+        <div>
+            <p><b>Jenis Kelamin :</b></p>
+            <input type="radio" id="pria" name="gender" value="Pria">
+            <label for="pria">Pria</label>
+            <input type="radio" id="wanita" name="gender" value="Wanita">
+            <label for="wanita">Wanita</label>
+        </div>
+        <div>
+            <p><b>Berat Badan (kg) :</b></p>
+            <input type="number" id="weightInput" name="weight" onkeydown="focusNext(event, 'ageInput')" placeholder="masukkan berat badan anda..">
+        </div>
+        <div>
+            <p><b>Usia :</b></p>
+            <input type="number" id="ageInput" name="age" onkeydown="focusNext(event, 'heightInput')" placeholder="masukkan usia anda..">
+        </div>
+        <div>
+            <p><b>Tinggi Badan (cm):</b></p>
+            <input type="number" id="heightInput" name="height" placeholder="masukkan tinggi badan anda..">
+        </div>
+        <div id="button"> 
+            <button type="button" onclick="saveData()">Hitung BMI</button>
+        </div>
+    </form>
+    <script>
+        function saveData() {
+        // Ambil nilai dari input
+        var weight = document.getElementById('weightInput').value;
+        var height = document.getElementById('heightInput').value;
+
+        // Simpan nilai ke sessionStorage
+        sessionStorage.setItem('weight', weight);
+        sessionStorage.setItem('height', height);
+
+        // Redirect ke halaman baru
+        window.location.href = 'result.html';
+        }
+    </script>  
+</body>
+</html>

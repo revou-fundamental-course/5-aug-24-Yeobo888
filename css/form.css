@@ -1,0 +1,31 @@
+body {
+    background-color: cyan;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+  @keyframes example {
+    from {background-color: darkorchid;}
+    to {background-color: cyan;}
+  }
+form {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 12px;
+}
+div button {
+    margin: 10px;
+    margin-top: 15px;
+}
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+::placeholder {
+    font-style: italic;
+}
